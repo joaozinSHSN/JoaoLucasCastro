@@ -1,0 +1,32 @@
+name: Run Tests with Jest
+
+on:
+  push:
+    branches:
+      - main  # Isso faz com que o workflow seja executado sempre que houver um push para a branch main
+  pull_request:
+    branches:
+      - main  # Isso faz com que o workflow seja executado quando houver um pull request para a branch main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Esse é o ambiente em que o workflow será executado
+
+    steps:
+      # Passo 1: Check-out do código
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Passo 2: Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Versão do Node.js que você está usando
+
+      # Passo 3: Instalar dependências
+      - name: Install dependencies
+        run: npm install
+
+      # Passo 4: Rodar os testes com Jest
+      - name: Run tests
+        run: npm test  # Comando para rodar os testes. Verifique se o Jest está configurado corretamente
