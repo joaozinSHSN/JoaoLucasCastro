@@ -34,12 +34,12 @@ describe('SWAPI Tests', () => {
     expect(data.results).toBeInstanceOf(Array);
   });
 
-  // // Teste2
-  // test('should fetch starships', async () => {
-  //   const data = await getStarships();
-  //   expect(data.count).toBeGreaterThan(0);
-  //   expect(data.results).toBeInstanceOf(Array);
-  // });
+  // Teste2
+  test('should fetch starships', async () => {
+    const data = await getStarships();
+    expect(data.count).toBeGreaterThan(0);
+    expect(data.results).toBeInstanceOf(Array);
+  });
 
   // // Teste3
   // test('should fetch films', async () => {
