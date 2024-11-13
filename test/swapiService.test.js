@@ -49,10 +49,10 @@ describe('SWAPI Tests', () => {
   });
 
   // // Teste4
-  // test('should return 404 for an unknown route', async () => {
-  //   const result = await getUnknownRoute();
-  //   expect(result.status).toBe(404);
-  // });
+  test('should return 404 for an unknown route', async () => {
+    const result = await getUnknownRoute();
+    expect(result.status).toBe(404);
+  });
 
   // // Teste5
   // test('should fetch planet by id', async () => {
