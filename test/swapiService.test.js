@@ -68,11 +68,11 @@ describe('SWAPI Tests', () => {
   });
 
   // // Teste7
-  // test('should fetch all species', async () => {
-  //   const data = await getSpecies();
-  //   expect(data.count).toBeGreaterThan(0);
-  //   expect(data.results).toBeInstanceOf(Array);
-  // });
+  test('should fetch all species', async () => {
+    const data = await getSpecies();
+    expect(data.count).toBeGreaterThan(0);
+    expect(data.results).toBeInstanceOf(Array);
+  });
 
   // // Teste8
   // test('should fetch a starship by ID', async () => {
