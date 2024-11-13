@@ -42,11 +42,11 @@ describe('SWAPI Tests', () => {
   });
 
   // // Teste3
-  // test('should fetch films', async () => {
-  //   const data = await getFilms();
-  //   expect(data.count).toBeGreaterThan(0);
-  //   expect(data.results).toBeInstanceOf(Array);
-  // });
+  test('should fetch films', async () => {
+    const data = await getFilms();
+    expect(data.count).toBeGreaterThan(0);
+    expect(data.results).toBeInstanceOf(Array);
+  });
 
   // // Teste4
   // test('should return 404 for an unknown route', async () => {
