@@ -87,8 +87,8 @@ describe('SWAPI Tests', () => {
   });
 
   // // Teste10
-  // test('should return 404 for a nonexistent planet', async () => {
-  //   const result = await getNonexistentPlanet();
-  //   expect(result.status).toBe(404);
-  // });
+  test('should return 404 for a nonexistent planet', async () => {
+    const result = await getNonexistentPlanet();
+    expect(result.status).toBe(404);
+  });
 });
