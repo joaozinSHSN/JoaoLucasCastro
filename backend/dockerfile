@@ -1,0 +1,16 @@
+# Imagem base
+FROM node:14
+
+# Diretório de trabalho
+WORKDIR /app
+
+# Copiar package.json e instalar dependências
+COPY package.json package-lock.json ./
+RUN npm install
+
+# Copiar código-fonte
+COPY . .
+
+# Expor a porta 5000 e iniciar o servidor
+EXPOSE 5000
+CMD ["node", "server.js"]

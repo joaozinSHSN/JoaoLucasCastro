@@ -1,0 +1,13 @@
+# Imagem base
+FROM postgres:13
+
+# Copiar script de inicialização (se necessário)
+COPY init.sql /docker-entrypoint-initdb.d/
+
+# Configurações de ambiente
+ENV POSTGRES_USER=user
+ENV POSTGRES_PASSWORD=password
+ENV POSTGRES_DB=mydatabase
+
+# Expor a porta padrão do PostgreSQL
+EXPOSE 5432

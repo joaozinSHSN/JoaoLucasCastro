@@ -1,0 +1,32 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        service: [frontend, backend, database]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker Image
+        run: docker build -t myapp-${{ matrix.service }} ./${{ matrix.service }}
+
+      - name: Run Tests
+        if: ${{ matrix.service != 'database' }}
+        run: |
+          docker run myapp-${{ matrix.service }} npm test
