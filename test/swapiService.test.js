@@ -55,10 +55,10 @@ describe('SWAPI Tests', () => {
   });
 
   // // Teste5
-  // test('should fetch planet by id', async () => {
-  //   const data = await getPlanetById(1);
-  //   expect(data.name).toBe('Tatooine');
-  // });
+  test('should fetch planet by id', async () => {
+    const data = await getPlanetById(1);
+    expect(data.name).toBe('Tatooine');
+  });
 
   // // Teste6
   // test('should fetch all people', async () => {
