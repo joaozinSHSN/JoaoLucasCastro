@@ -61,11 +61,11 @@ describe('SWAPI Tests', () => {
   });
 
   // // Teste6
-  // test('should fetch all people', async () => {
-  //   const data = await getPeople();
-  //   expect(data.count).toBeGreaterThan(0);
-  //   expect(data.results).toBeInstanceOf(Array);
-  // });
+  test('should fetch all people', async () => {
+    const data = await getPeople();
+    expect(data.count).toBeGreaterThan(0);
+    expect(data.results).toBeInstanceOf(Array);
+  });
 
   // // Teste7
   // test('should fetch all species', async () => {
