@@ -81,10 +81,10 @@ describe('SWAPI Tests', () => {
   });
 
   // // Teste9
-  // test('should fetch a film by ID', async () => {
-  //   const data = await getFilmById(1);
-  //   expect(data.title).toBe('A New Hope');
-  // });
+  test('should fetch a film by ID', async () => {
+    const data = await getFilmById(1);
+    expect(data.title).toBe('A New Hope');
+  });
 
   // // Teste10
   // test('should return 404 for a nonexistent planet', async () => {
