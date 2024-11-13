@@ -75,10 +75,10 @@ describe('SWAPI Tests', () => {
   });
 
   // // Teste8
-  // test('should fetch a starship by ID', async () => {
-  //   const data = await getStarshipById(9);
-  //   expect(data.name).toBe('Death Star');
-  // });
+  test('should fetch a starship by ID', async () => {
+    const data = await getStarshipById(9);
+    expect(data.name).toBe('Death Star');
+  });
 
   // // Teste9
   // test('should fetch a film by ID', async () => {
